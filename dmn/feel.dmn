@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" id="definitions" name="decision-maker" namespace="https://example.com/dmn" exporter="OpenRules, Inc." exporterVersion="8.1.2">
+  <decision id="your-decision-id" name="Holiday Decision" hitPolicy="UNIQUE" expressionLanguage="feel">
+    <decisionTable id="decisionTable" hitPolicy="UNIQUE">
+      <input id="holidayInput" label="Holiday">
+        <inputExpression id="inputExpression" typeRef="boolean">
+          <text>holiday</text>
+        </inputExpression>
+      </input>
+      <output id="output" label="Decision Result" name="decisionResult" typeRef="string" />
+      <rule id="rule1">
+        <inputEntry id="inputEntry1">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="outputEntry1">
+          <text>Packing for a holiday trip</text>
+        </outputEntry>
+      </rule>
+      <rule id="rule2">
+        <inputEntry id="inputEntry2">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="outputEntry2">
+          <text>Packing for the office</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

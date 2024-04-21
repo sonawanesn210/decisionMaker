@@ -1,0 +1,56 @@
+BPMN (Business Process Model and Notation) workflows using expressions similar to Camunda 
+
+js-feel, json-rules-engine , jexl, expr-eval 
+pros and cons:
+
+1)  js-feel: //1,163 downloads though have less downloads but supports complex operations too
+
+Pros:
+Implements the FEEL (Friendly Enough Expression Language) specification, which is widely used in BPMN workflows.
+Supports complex expression evaluation and decision logic.
+Provides a rich set of built-in functions and operators for expression evaluation.
+Allows you to define and evaluate dynamic expressions at runtime.
+
+Cons:
+Focused primarily on expression evaluation rather than rule-based decision-making.
+Limited support for managing complex rule sets and chaining rules together.
+May require additional development effort to handle rule-specific features like rule priority, rule chaining, or rule conflicts.
+
+
+2)  json-rules-engine: //92166 downloads
+
+Pros:
+Provides a rule engine specifically designed for managing complex rule-based decision-making.
+Supports forward chaining and backward chaining rules.
+Allows you to define rules using JSON-based syntax, which aligns well with BPMN workflows.
+Offers a declarative approach for defining rules, making it easier to manage and understand complex decision logic.
+Provides event-driven capabilities, allowing rules to react to changes in the system or workflow.
+Cons:
+May have a steeper learning curve due to the rule engine concept and syntax.
+Requires additional effort to integrate with BPMN workflows and the BPMN execution engine.
+May not have the same level of built-in function support as js-feel.
+
+
+3) expr-eval  //158,925 downloads // supports ts // not working for complex decision ===good for mathematical operations
+Pros:
+
+Lightweight library focused on expression evaluation.
+Supports a wide range of mathematical and logical operators.
+Allows you to define and evaluate dynamic expressions.
+Easy to integrate into your existing codebase.
+Provides a simple API for parsing and evaluating expressions.
+Can handle complex mathematical calculations and logical evaluations.
+Cons:
+
+Limited support for managing complex rule sets and rule-based decision-making.
+Lacks built-in features for rule chaining, rule conflicts, or rule prioritization.
+May require additional development effort to handle advanced rule-based decision logic.
+Limited built-in functions and operators compared to libraries specifically designed for rule engines or decision automation.
+
+4)jexl //ts// 29355
+
+5)nools ==> depricated
+Summary:
+**js-feel is a good choice if you primarily need to evaluate complex expressions in your BPMN workflows. It provides a comprehensive implementation of the FEEL specification and supports dynamic expression evaluation.
+**if require a dedicated rule engine with support for managing complex rule sets, rule chaining, and event-driven decision-making, json-rules-engine would be a better fit.
+**expr-eval is suitable when you primarily need to evaluate mathematical or logical expressions in your BPMN workflows. It's a lightweight library that can handle complex calculations and evaluations efficiently. However, if you require more advanced rule-based decision-making capabilities, such as managing complex rule sets, rule chaining, or event-driven decision logic,  js-feel or json-rules-engine may be more appropriate.

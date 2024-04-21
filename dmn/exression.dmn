@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/"
+             xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/"
+             xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
+             xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
+             xmlns:camunda="http://camunda.org/schema/1.0/dmn"
+             id="definitions"
+             name="DMN Example"
+             namespace="http://camunda.org/schema/1.0/dmn"
+             exporter="Camunda Modeler"
+             exporterVersion="1.9.0">
+  <decision id="decision1" name="Leave Decision">
+    <decisionTable id="decisionTable1">
+      <input id="input1" label="Leave Approved">
+        <inputExpression id="inputExpression1" typeRef="boolean">
+          <text>leaveApproved</text>
+        </inputExpression>
+      </input>
+      <output id="output1" label="Decision" name="decision" typeRef="string"/>
+      <rule id="rule1">
+        <inputEntry id="inputEntry1">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="outputEntry1">
+          <text>"Holiday"</text>
+        </outputEntry>
+      </rule>
+      <rule id="rule2">
+        <inputEntry id="inputEntry2">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="outputEntry2">
+          <text>"Office"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

@@ -1,0 +1,23 @@
+//92166 downloads
+
+
+ rules define the conditions that need to be satisfied for a specific event to occur. They allow you to model decision-making logic and automate the process of evaluating conditions and triggering events based on those conditions.
+
+
+ A rule consists of two main components: conditions and events.
+
+Conditions:
+
+Conditions define the criteria that must be met for the rule to be triggered.
+They specify the facts, their paths, operators, and values to be compared.
+Conditions can be simple or complex, depending on the logical operations used.
+The json-rules-engine library supports logical operations such as "all" (AND), "any" (OR), and "not" (NOT).
+The "all" condition requires that all sub-conditions within it evaluate to true for the rule to trigger.
+The "any" condition requires that at least one sub-condition within it evaluates to true for the rule to trigger.
+The "not" condition negates the result of a sub-condition.
+
+Events:
+Events define the actions or outcomes associated with a rule when its conditions are met.
+They specify the type of event that will be triggered when the rule is evaluated as true.
+Events can be used to indicate success, failure, or any other desired outcome.
+By defining rules with appropriate conditions and events, you can model complex decision-making processes. The json-rules-engine library allows you to add rules to an engine, provide facts, and run the engine to evaluate the rules based on the provided facts.
